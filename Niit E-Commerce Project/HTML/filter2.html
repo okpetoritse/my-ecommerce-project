@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/filter.css'>
+    <link rel="stylesheet" href="../CSS/common.css">
+    <script src='main.js'></script>
+</head>
+<body> 
+    <header class="site-header" role="banner">
+        <img src="../Assets/logo.png" alt="Logo" class="logo">
+        <div class="site-header__inner">
+          <div class="site-header__left">
+            <button class="common-menu-toggle" aria-label="Open menu">☰</button>
+          </div>
+      
+          <div class="site-header__right">
+            <button class="search-btn" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="favorites-btn" aria-label="Favorites">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <a class="cart-btn" href="../HTML/checkout4.html" aria-label="Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" data-cart-count="0" aria-hidden="true">0</span>
+            </a>
+           <a class="account-link" href="../HTML/signin.html" aria-label="Login or Signup">
+              <i class="fa-regular fa-user"></i>
+           </a>
+      
+            </a>
+          </div>
+        </div>
+    </header>      
+<section class="product-page">
+    <div class="filters-sidebar">
+        <div class="leftside">
+            <p>Filters</p>
+        </div>
+        <div class="size">
+            <h6>Size</h6>
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <button>2X</button>
+            <hr>
+        </div>
+        <div class="filter-availability">
+            <h4>Availability</h4>
+            <label>
+                <input type="radio" name="availability" value="in-stock">
+                In Stock
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="availability" value="out-of-stock">
+                Out of Stock
+            </label>
+            <hr>
+        </div>
+        <div class="filter-section">
+            <div class="filter-item">
+                <span class="filter-label">Category</span>
+                </div>
+            <hr>
+            <div class="filter-item">
+                <span class="filter-label">Colors</span>
+            </div>
+            <hr>
+            <div class="filter-item">
+                <span class="filter-label">Price Range</span>
+            </div>
+            <hr>
+            <div class="filter-item">
+                <span class="filter-label">Collections</span>
+            </div>
+            <hr>
+            <div class="filter-item">
+                <span class="filter-label">Tags</span>
+            </div>
+            <hr>
+            <div class="filter-item">
+                <span class="filter-label">Ratings</span>
+            </div>
+        </div>
+    </div>
+    <div class="product-sidebar">
+        <div class="product-content">
+            <div class="product-search-bar">
+                <div class="product-search">
+                    <h5>Home / Products</h5>
+                    <h3>PRODUCTS</h3>
+                </div>
+                <div class="search-bar">
+                    <form action="/search" method="get">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" name="q" placeholder="Search..." required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="search-buttons">
+                <button>NEW</button>
+                <button>BEST SELLERS</button>
+                <button>SHIRTS</button>
+                <button>POLO SHIRTS</button>
+                <button>T-SHIRTS</button>
+                <button>COATS</button>
+                <button>SUITS</button>
+                <button>JEANS</button>
+                <button>JACKETS</button>
+                <button>SHORTS</button>
+            </div>  
+        </div>
+        <div class="products-grid">
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/eighth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crowneck t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/eighth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crowneckt t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$100.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/seventh.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crownecky t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$54.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/tenth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crownecke t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/tenth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crownecko t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$234.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/third.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crowneckr t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/sixth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crowneckw t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/fifth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crowneckd t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tshirt"></i>
+                        <img src="../Assets/eighth.png">
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="color-row">
+                        <div class="color-box"></div>
+                        <span class="product-name">crowneckg t-shirt</span>
+                        <span class="color-count">+3</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="product-type">basic heavy t shirt</span>
+                        <span class="price">$24.99</span>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>    
+    </div>             
+</section>
+<footer class="footer">
+        <div class="footer-container">  
+            
+            <div class="footer-brand">
+            <img src="../Assets/logo.png" alt="Logo">
+            <p>Elegant Vogue — blending creativity with craftsmanship to create timeless fashion.</p>
+            </div>
+            
+            <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="MEN.html">Men</a></li>
+                <li><a href="WOMEN.html">Women</a></li>
+                <li><a href="KIDS.html">Kids</a></li>
+            </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <form action="#">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+            </div>
+           
+            <div class="footer-socials">
+            <h4>Follow Us</h4>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elegant Vogue. All rights reserved.</p>
+        </div>
+    </footer> 
+    <div class="cart-toast" id="cartToast">Item added to cart ✅</div>
+    <script src="../javascript/filter2.js"></script>
+</body>
+</html>
+

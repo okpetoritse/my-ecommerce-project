@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../CSS/checkout.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <main class="checkout-container">
+    <section class="checkout-form">
+      <div class="checkout-steps" role="tablist" aria-label="Checkout steps">
+        <button class="step active" data-step="contact">1. Contact</button>
+        <button class="step" data-step="shipping">2. Shipping</button>
+        <button class="step" data-step="payment">3. Payment</button>
+      </div>
+      <form id="checkout-form" class="form-panel" autocomplete="on">
+        <h2>Contact information</h2>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" placeholder="+1 555 555 5555" />
+        </div>
+        <hr>
+        <h2>Shipping address</h2>
+        <div class="form-row">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="John Doe" required />
+        </div>
+
+        <div class="form-row">
+          <label for="address1">Address</label>
+          <input id="address1" name="address1" type="text" placeholder="Street address, P.O. box, etc." required />
+        </div>
+        <div class="form-row">
+          <label for="address2">Apt, suite, etc. (optional)</label>
+          <input id="address2" name="address2" type="text" placeholder="Apartment, suite, etc."/>
+        </div>
+        <div class="form-grid-3">
+          <div class="form-row">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="City" required />
+          </div>
+          <div class="form-row">
+            <label for="state">State / Region</label>
+            <input id="state" name="state" type="text" placeholder="State" required />
+          </div>
+          <div class="form-row">
+            <label for="zip">ZIP / Postal</label>
+            <input id="zip" name="zip" type="text" placeholder="Postal code" required />
+          </div>
+        </div>
+        <!-- Shipping method (radio) -->
+        <div class="form-row">
+          <label>Shipping method</label>
+          <div class="shipping-options">
+            <label class="radio">
+              <input type="radio" name="shippingMethod" value="standard" checked />
+              <span class="radio-label"><strong>Standard</strong> — 3–5 days &nbsp; <span class="muted">$5.00</span></span>
+            </label>
+            <label class="radio">
+              <input type="radio" name="shippingMethod" value="express" />
+              <span class="radio-label"><strong>Express</strong> — 1–2 days &nbsp; <span class="muted">$15.00</span></span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="checkout-summary">
+      <h2>Order Summary</h2>
+      <div class="order-summary"></div>
+      <div class="summary-totals">
+        <p>Subtotal: <span class="subtotal">$0.00</span></p>
+        <p>Shipping: <span class="shipping">$5.00</span></p>
+        <p><strong>Total: <span class="total">$0.00</span></strong></p>
+      </div>
+      <button class="checkout-btn">Proceed to Payment</button>
+    </section>
+  </main>
+  <script src="../javascript/checkout4.js"></script>
+</body>
+</html>
