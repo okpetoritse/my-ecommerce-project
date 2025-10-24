@@ -1,0 +1,779 @@
+ @import url('https://fonts.cdnfonts.com/css/beatrice-display-trial');
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap');
+
+:root{
+    --main-font: 'Beatrice Deck Trial', sans-serif;
+    --main-color: #fdfafa;
+    --secondary-color: #000;
+}
+                
+body{
+  margin: 0;
+  padding-top: 70px;
+  box-sizing: border-box;
+  background-color: #d4cfcf;
+}
+
+.header{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;                     
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  z-index: 1000;                  
+  box-sizing: border-box; 
+}
+
+.headerBarLeft, .headerBarRight{
+    display: flex;
+    gap: 40px;
+}
+
+.logo{
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 20px;;
+}
+
+.headerImage{
+    width: 26px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.headerLinks a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px; 
+    padding: 10px 15px;
+    line-height: auto;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.headerDivider i {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  
+}
+
+.headerDivider i.fa-caret-left {
+  color: yellowgreen;
+}
+.headerDivider i.fa-caret-right {
+  margin-left: -31px;  
+}
+
+.headerBarRight{
+    display: flex;
+    gap: 20px;
+    padding-right: 35px;
+}
+
+.headerIcons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerIcons i{
+    font-size: 25px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartIcon{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.cartIcon i{
+  display: inline-flex;               
+  align-items: center;
+  justify-content: center;
+  width: 25px;                        
+  height: 25px;
+  font-size: 15px;                   
+  color: black;
+  border: 5px solid black;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.cartIcon i:hover {
+  background-color: pink;              
+  color: white;                       
+}
+
+.cartIcon p{
+  background-color: black;
+  color: white;
+  display: inline-block;  
+  padding: 6px 12px;       
+  border-radius: 14px;      
+  font-size: 12px;
+  line-height: 1;        
+  cursor: pointer;
+  font-weight: medium;
+  line-height: auto;
+  letter-spacing: 2px;
+}
+
+.cartIcon p:hover{
+    background-color: #333333;
+    color: var(--main-color);
+}
+
+.navBar{
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    font-family: var(--main-font);
+}
+
+.navBarTop ul{
+    padding-right: 10px;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.navBarTop ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 0px 0px;
+    line-height: auto;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+
+/* CSS */
+.search-container {
+  position: relative;
+  width: 300px; 
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 10px; 
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-container .search-icon {
+  position: absolute;
+  right: 1px;           
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: yellowgreen ;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.shopCard{
+    display: flex;
+    padding-top: 50px;
+}
+
+.shopCard-set{
+    width: 366px;
+    height: 376px;
+    overflow: hidden;
+    margin: 20px;
+    font-family: var(--main-font);
+    cursor: pointer;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+.collection h1{
+    line-height: 40px;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 10px 0px 0px 1px;
+}
+
+.collection h4{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 1px 0 0 1px;
+}
+
+.shopItemsIcon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CTA{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.CTA button {
+  padding: 10px 16px;
+  border: none;
+  background-color: rgba(217, 217, 217, 1); 
+  color: black;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.CTA i {
+  font-size: 18px;
+  color: rgb(155, 153, 153); 
+  cursor: pointer;
+}
+
+.shopItemsIcon-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.shopItemsIcon-right i {
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.shopItemsIcon-right i:hover {
+  background-color: rgb(155, 153, 153);;
+}
+
+.shopCardImg{
+    display: flex;
+    padding-top: 20px;
+} 
+ .img-container {
+  width: 366px;
+  height: 376px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0,   0.1);
+
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+} 
+
+
+.image-carousel {
+  width: 100%;              
+  overflow-x: auto;          
+  white-space: nowrap;   
+  box-sizing: border-box;   
+  scrollbar-width: none;      
+  -ms-overflow-style: none; 
+
+}
+
+.image-carousel::-webkit-scrollbar {
+  display: none; 
+}
+
+.carousel-track img {
+  width: 366px;
+  height: 376px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(215, 215,215, 1);
+  background-color:  var(--main-color);
+}
+
+.weekSection{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.week{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 20px;
+    justify-content: space-between;
+   
+}
+
+.week p{
+  width: 283px;
+  height: 80px;
+  font-family: var(--main-font);
+  line-height: 40px;
+  font-size: 48px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  
+}
+
+.week h6{
+  height: 49;
+  height: 40;
+  font-family: var(--main-font);
+  line-height: 40px;
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-self: flex-end;
+}
+
+.weekCard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 305px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 313px;
+  overflow: hidden;
+  background: rgba(215, 215, 215, 1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plus {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: #333;
+  background: rgba(226, 210, 210, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 10px;
+  margin-right: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.description h6 {
+  font-size: 12px;
+  margin: 5px 0 2px;
+  font-weight: 400;
+  line-height: auto;
+  color: rgba(0, 0, 0, 0.66);
+  font-family: var(--main-font);
+}
+
+.description p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  font-family: var(--main-font);
+}
+
+
+.weekCardSliders{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.left-icon{
+  background-color: var(--main-color);
+  padding: 7px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.right-icon{
+  background-color: var(--main-color);
+  padding: 7px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.XIVS{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.XIV{
+  width: 356PX;
+  height: 120PX;
+  padding-left: 25PX;
+}
+
+.XIV p{
+  font-weight: 800;
+  line-height: 40px;
+  font-size: 48px;
+  letter-spacing: 2px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.XIVS UL{
+  list-style: none;
+  display: flex;
+  gap: 10PX;
+  padding-left: 25PX;
+}
+
+.XIVS ul li{
+  font-weight: 400;
+  line-height: 40px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  font-family: var(--main-font);
+}
+
+
+.XIVS hr {
+  border: none;
+  border-top: 2px solid black;
+  width: 80%;      
+  margin: 20px auto; 
+}
+
+
+.vision{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 110px;
+    gap: 1px;
+}
+
+.visionss p{
+  font-size: 40px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: var(--main-font);
+  margin: 0;
+}
+
+.visionWords{
+  width: 685px;
+  height: 96px;
+}
+
+.visionWords p{
+  font-weight: 100px;
+  font-size: 15px;
+  line-height: auto;
+  font-family: var(--main-font);
+  text-align: center;
+}
+
+.zigzag {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.zigzag-card {
+  width: 220px;               
+  height: 280px;               /* card height */
+  border: 1px solid #ccc;      /* thin border */
+  border-radius: 12px;         /* rounded corners */
+  overflow: hidden;            /* keeps image inside */
+  background: #fff;            /* card background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.zigzag-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zigzag effect */
+.zigzag-card:nth-child(odd) {
+  margin-top: 40px;
+}
+.zigzag-card:nth-child(even) {
+  margin-bottom: 40px;
+}
+
+
+.footer {
+    margin-top: 150px;
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: var(--main-font);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-brand img {
+  width: 120px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-links h4,
+.footer-newsletter h4,
+.footer-socials h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+  color: yellowgreen;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 16px;
+  border: none;
+  background: yellowgreen;
+  color: #111;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background: #8bc34a;
+}
+
+.footer-socials .icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.footer-socials i:hover {
+  color: yellowgreen;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* ✅ Floating cart notification */
+.cart-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.cart-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ======================= */
+/*   MEDIA QUERIES         */
+/* ======================= */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px; 
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .headerBarLeft, .headerBarRight {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .shopCard-set {
+    width: 100%;
+    text-align: center;
+  }
+
+  .collection h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .week p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .weekCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cardWrapper {
+    width: 90%; 
+  }
+
+  .XIV p {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .visionWords {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .zigzag {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zigzag-card {
+    width: 90%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-brand img {
+    width: 90px;
+  }
+}

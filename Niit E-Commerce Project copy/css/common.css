@@ -1,0 +1,141 @@
+ @import url('https://fonts.cdnfonts.com/css/beatrice-display-trial');
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap');
+
+
+/* common.css - header + footer (namespaced) */
+:root{
+  --common-header-bg: #fff;
+  --common-header-height: 72px;
+  --common-accent: #222;
+  --common-muted: #666;
+  --common-footer-bg: #111;
+  --common-footer-color: #fff;
+  --common-font-family: 'Beatrice Deck Trial', sans-serif;
+}
+
+/* base scoping — avoid global overrides */
+.site-header {
+  position: fixed;                     /* keep header visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--common-header-bg);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  height: var(--common-header-height);
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.active{
+  display: flex;
+}
+
+.site-header__inner{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* left group */
+.site-header__left {
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.common-menu-toggle{
+  display:block; /* shown on small screens via media queries */
+  background:none;
+  border:none;
+  font-size:20px;
+  cursor:pointer;
+}
+.site-logo img{
+  height:40px;
+  display:block;
+}
+.site-nav {
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+.site-nav a{
+  text-decoration:none;
+  color:var(--common-accent);
+  font-size:15px;
+  letter-spacing:1px;
+}
+
+/* right group */
+.site-header__right{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.site-header__right button,
+.site-header__right a{
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:var(--common-accent);
+  font-size:18px;
+  display:flex;
+  align-items:center;
+}
+.cart-btn { position:relative; }
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-8px;
+  background:#ff4d4f;
+  color:white;
+  border-radius:50%;
+  padding:2px 6px;
+  font-size:12px;
+}
+
+/* footer */
+.site-footer{
+  background:var(--common-footer-bg);
+  color:var(--common-footer-color);
+  padding:36px 20px 18px;
+  margin-top:40px;
+}
+.site-footer__inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px;
+  align-items:start;
+}
+.site-footer__bottom{
+  max-width:1200px;
+  margin: 16px auto 0;
+  text-align:center;
+  color:#aaa;
+}
+
+/* small helpers */
+.footer-brand img{ height:48px; display:block; margin-bottom:10px; }
+.footer-links ul{ list-style:none; padding:0; margin:0; }
+.footer-links a{ color:#ccc; text-decoration:none; display:block; margin:6px 0; }
+.footer-newsletter input{ padding:8px; border-radius:6px; border:none; margin-right:8px; }
+.footer-newsletter button{ padding:8px 12px; border-radius:6px; border:none; cursor:pointer; background: #9acd32 }
+
+/* responsive — show menu toggle and collapse nav */
+@media (max-width: 880px) {
+  .site-nav { display:block; }
+  .common-menu-toggle { display:inline-flex; }
+  .site-header__inner { padding: 0 14px; }
+  .site-footer__inner { grid-template-columns: 1fr; }
+}
+
+/* Make sure your page content does not get hidden under fixed header
+   We will set body padding-top dynamically via JS too, this is fallback value */
+body { padding-top: var(--common-header-height); }
